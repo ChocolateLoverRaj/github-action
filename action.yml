@@ -22,3 +22,5 @@ runs:
       run: pnpm start
       shell: bash
       working-directory: ${{ github.action_path }}
+      env:
+        INPUT_STR: ${{ inputs.str }}
