@@ -13,3 +13,6 @@ jobs:
         uses: ChocolateLoverRaj/github-action@main
         with:
           str: Python is bad.
+        id: test_self
+      - name: Print Output
+        run: echo ${{ steps.test_self.outputs.str }}
