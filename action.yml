@@ -14,7 +14,7 @@ runs:
   steps:
     - run: pnpm i
       shell: bash
-    - run: node t.js
+    - run: printenv
       shell: bash
     - id: main
       run: pnpm start
