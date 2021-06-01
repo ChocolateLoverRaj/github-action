@@ -12,7 +12,9 @@ jobs:
       - name: Test Self
         uses: ChocolateLoverRaj/github-action@main
         with:
-          str: Python is bad.
+          str: 'Python is bad.'
         id: test_self
       - name: Print Output
-        run: echo ${{ steps.test_self.outputs.str }}
+        run: 'echo Output of test: ${{ steps.test_self.outputs.str }}'
+      - name: Print Inputs
+        run: 'echo Inputs of test: ${{ steps.test_self.inputs.str }}'
