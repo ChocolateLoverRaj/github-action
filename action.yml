@@ -14,8 +14,8 @@ runs:
   steps:
     - run: pnpm i
       shell: bash
-    - run: printenv
-      shell: bash
+      working-directory: ${{ env.GITHUB_ACTION_PATH }}
     - id: main
       run: pnpm start
       shell: bash
+      working-directory: ${{ env.GITHUB_ACTION_PATH }}
