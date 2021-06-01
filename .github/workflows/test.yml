@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Pnpm
-        uses: pnpm/action-setup@v2.0
+        uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.4
       - name: Test Self
