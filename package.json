@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "github-action",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ChocolateLoverRaj/github-action#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChocolateLoverRaj/github-action.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsc",
+    "start": "node dist/index"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "@actions/core": "^1.3.0",
+    "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=4.0.1",
+    "eslint": ">=7.12.1",
+    "eslint-config-standard-with-typescript": "^20.0.0",
+    "eslint-plugin-import": ">=2.22.1",
+    "eslint-plugin-node": ">=11.1.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "typescript": "^4.3.2"
+  },
+  "author": {
+    "name": "Rajas Paranjpe",
+    "url": "https://github.com/ChocolateLoverRaj"
+  }
+}

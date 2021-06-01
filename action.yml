@@ -1,0 +1,19 @@
+name: GitHub Action
+description: Outputs a capitalized string of whatever the input string is.
+inputs:
+  str:
+    description: Any string
+    required: true
+    default: Banana
+outputs:
+  str:
+    description: The input string capitalized
+    value: ${{ steps.main.outputs.str }}
+runs:
+  using: composite
+  steps:
+    - run: pnpm i
+      shell: bash
+    - id: main
+      run: pnpm start
+      shell: bash

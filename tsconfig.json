@@ -1,0 +1,14 @@
+{
+  "include": [
+    "./lib"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./lib",
+    "esModuleInterop": false,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "module": "CommonJS",
+    "declaration": true
+  }
+}
