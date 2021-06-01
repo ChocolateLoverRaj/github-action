@@ -12,7 +12,7 @@ jobs:
         with:
           version: 6.4
       - name: Test Self
-        uses: ../../action.yml
+        uses: ./../../action.yml
         with:
           str: 'Python is bad.'
         id: test_self
