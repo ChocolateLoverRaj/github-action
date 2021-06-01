@@ -15,6 +15,9 @@ runs:
     - run: pnpm i
       shell: bash
       working-directory: ${{ github.action_path }}
+    - run: pnpm build
+      shell: bash
+      working-directory: ${{ github.action_path }}
     - id: main
       run: pnpm start
       shell: bash
