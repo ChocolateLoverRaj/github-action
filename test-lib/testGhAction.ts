@@ -5,8 +5,10 @@ import { EOL } from 'os'
 
 const testGhAction = async (file: string, inputs: Record<string, string> = {}): Promise<Record<string, string>> => {
   const c = spawn('node', [file], {
-    env: Object.fromEntries(Object.entries(inputs).map(([k, v]) => [`INPUT_${k.toUpperCase()}`, v]
-    ))
+    env: {
+      ...process.env,
+      ...Object.fromEntries(Object.entries(inputs).map(([k, v]) => [`INPUT_${k.toUpperCase()}`, v]))
+    }
   })
   const stdoutStr = streamToString(c.stdout)
   const stderrStr = streamToString(c.stderr)
