@@ -48,5 +48,8 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Confirm Node is a command
+        run: node -v
+
       - name: Run Tests
         run: pnpm test
