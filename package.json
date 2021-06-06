@@ -12,6 +12,7 @@
     "lint": "eslint .",
     "build": "tsc",
     "test": "jest",
+    "test:ci": "jest --ci",
     "start": "node dist/index"
   },
   "main": "dist/index.js",
