@@ -5,10 +5,12 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./lib",
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "strictNullChecks": true,
     "importHelpers": true,
     "module": "CommonJS",
-    "declaration": true
+    "lib": [
+      "ES2019"
+    ]
   }
 }
