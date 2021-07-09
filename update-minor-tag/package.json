@@ -1,0 +1,16 @@
+{
+  "name": "release-it-plugin-update-minor-tag",
+  "main": "UpdateMinorTag.js",
+  "version": "1.0.0",
+  "description": "Updates a minor tag, like v1.0 to match the latest patch release.",
+  "keywords": [
+    "release-it",
+    "release-it-plugin"
+  ],
+  "author": "Rajas Paranjpe",
+  "license": "MIT",
+  "dependencies": {
+    "never": "^1.0.3",
+    "semver": "^7.3.5"
+  }
+}

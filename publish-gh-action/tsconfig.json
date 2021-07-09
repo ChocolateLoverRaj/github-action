@@ -1,0 +1,16 @@
+{
+  "include": [
+    "./lib"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./lib",
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "module": "CommonJS",
+    "declaration": true,
+    "moduleResolution": "node",
+    "target": "ES2020"
+  }
+}

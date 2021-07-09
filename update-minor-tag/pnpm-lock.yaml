@@ -1,0 +1,35 @@
+lockfileVersion: 5.3
+
+specifiers:
+  never: ^1.0.3
+  semver: ^7.3.5
+
+dependencies:
+  never: 1.0.3
+  semver: 7.3.5
+
+packages:
+
+  /lru-cache/6.0.0:
+    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
+    engines: {node: '>=10'}
+    dependencies:
+      yallist: 4.0.0
+    dev: false
+
+  /never/1.0.3:
+    resolution: {integrity: sha512-nJne5st+rCDsEqqJ5K9dnGmYCjYuoiIxWBAQb5OVujDJ8Wr1GuEIffLON7QqBQMhmBsK0hQg5JE+Zwq+gEJfzw==}
+    engines: {node: '>=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0'}
+    dev: false
+
+  /semver/7.3.5:
+    resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: false
+
+  /yallist/4.0.0:
+    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+    dev: false

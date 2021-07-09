@@ -1,0 +1,12 @@
+name: Demo
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - id: main
+        uses: ChocolateLoverRaj/github-action@v1.3
+        with:
+          str: This is a test string
+      - run: echo ${{ steps.main.outputs.str }}
