@@ -26,12 +26,17 @@ class PublishGhAction extends Plugin {
   }
 
   async release (): Promise<void> {
-    const { actionYaml, packageJson } = await generateActionYaml()
+    const { actionYaml, packageJson, distPackageJson } = await generateActionYaml()
     if (!(packageJson.files instanceof Array)) throw new Error('Must specify files in package.json')
     await super.step({
       enabled: true,
-      task: async (): Promise<void> => await writeFile('action.yaml', actionYaml),
-      label: 'Create action.yaml'
+      task: async (): Promise<void> => {
+        await Promise.all([
+          writeFile('action.yaml', actionYaml),
+          writeFile('package.json', distPackageJson)
+        ])
+      },
+      label: 'Create necessary files'
     })
     await super.step({
       enabled: true,

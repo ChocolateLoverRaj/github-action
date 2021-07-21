@@ -6,6 +6,7 @@ import inputToEntry from './inputToEntry'
 export interface GenerateActionYamlResult {
   actionYaml: string
   packageJson: ParsePackageJsonResult
+  distPackageJson: string
 }
 
 /**
@@ -31,7 +32,7 @@ const generateActionYaml = async (): Promise<GenerateActionYamlResult> => {
     runs: {
       using: 'composite',
       steps: [{
-        run: 'pnpm i --only=prod',
+        run: 'pnpm i',
         ...commonEntries
       }, {
         id: 'a',
@@ -42,7 +43,9 @@ const generateActionYaml = async (): Promise<GenerateActionYamlResult> => {
       }]
     }
   })
-  return { actionYaml, packageJson }
+  const distPackageJson = JSON.stringify(Object.fromEntries(Object.entries(packageJson).filter(
+    ([k]) => new Set(['dependencies', 'type']).has(k))))
+  return { actionYaml, packageJson, distPackageJson }
 }
 
 export default generateActionYaml
