@@ -1,0 +1,23 @@
+name: GitHub Action
+description: Outputs a capitalized string of whatever the input string is.
+inputs:
+  str:
+    required: "true"
+    default: Banana
+    description: Any string
+outputs:
+  str:
+    description: The input string capitalized
+    value: "${{steps.a.outputs.str}} "
+runs:
+  using: composite
+  steps:
+    - run: pnpm i --only=prod
+      shell: bash
+      working-directory: ${{github.action_path}}
+    - id: a
+      run: pnpm start
+      shell: bash
+      working-directory: ${{github.action_path}}
+      env:
+        INPUT_STR: ${{inputs.str}}
