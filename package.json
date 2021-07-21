@@ -1,0 +1,1 @@
+{"scripts":{"start":"node dist/index"},"dependencies":{"@actions/core":"^1.4.0","tslib":"^2.3.0"}}
