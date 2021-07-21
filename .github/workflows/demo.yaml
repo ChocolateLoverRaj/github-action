@@ -5,6 +5,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.4
       - id: main
         uses: ChocolateLoverRaj/github-action@v1.3
         with:
