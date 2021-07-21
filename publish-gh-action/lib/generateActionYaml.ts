@@ -43,9 +43,12 @@ const generateActionYaml = async (): Promise<GenerateActionYamlResult> => {
       }]
     }
   })
-  const distPackageJson = JSON.stringify(Object.fromEntries(Object.entries(packageJson).filter(
-    ([k]) => new Set(['dependencies', 'type']).has(k))))
-  return { actionYaml, packageJson, distPackageJson }
+  const distPackageJson = Object.fromEntries(Object.entries(packageJson).filter(
+    ([k]) => new Set(['dependencies', 'type', 'scripts']).has(k)))
+  if (distPackageJson.scripts?.start !== undefined) {
+    distPackageJson.scripts = { start: distPackageJson.scripts.start }
+  } else delete distPackageJson.scripts
+  return { actionYaml, packageJson, distPackageJson: JSON.stringify(distPackageJson) }
 }
 
 export default generateActionYaml
