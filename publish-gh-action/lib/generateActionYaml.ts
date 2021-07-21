@@ -31,7 +31,7 @@ const generateActionYaml = async (): Promise<GenerateActionYamlResult> => {
     runs: {
       using: 'composite',
       steps: [{
-        run: 'pnpm i',
+        run: 'pnpm i --only=prod',
         ...commonEntries
       }, {
         id: 'a',
